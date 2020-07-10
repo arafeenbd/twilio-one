@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useRef} from 'react';
 import './App.css';
 import StartForm from './StartForm';
-import TwilioVideo from "twilio-video"
+import TwilioVideo from "twilio-video";
 
 const Video = ({ token }) => {
   const localVidRef = useRef()
