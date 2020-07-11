@@ -39,7 +39,7 @@ const Video = ({ token }) => {
         room.on("participantConnected", addParticipant)
       },error => {
         console.error(`Unable to connect to Room: ${error.message}`);
-        alert('Unable to connect to Room')
+        alert(`Unable to connect to Room: ${error.message}`)
       }
     )
   }, [token])
