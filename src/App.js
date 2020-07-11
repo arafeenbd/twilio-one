@@ -11,12 +11,14 @@ const Video = ({ token }) => {
     TwilioVideo.connect(token, { video: true, audio: true, name: "test" }).then(
       room => {
         // Attach the local video
+        alert(token);
         TwilioVideo.createLocalVideoTrack().then(track => {
           localVidRef.current.appendChild(track.attach())
         })
 
         const addParticipant = participant => {
           console.log("new participant!")
+          alert("new participant!")
           console.log(participant)
           participant.tracks.forEach(publication => {
             if (publication.isSubscribed) {
